@@ -1,0 +1,20 @@
+.nav-link{
+color:white !important;
+background:none;
+    color:#ffa260;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition:all 1sec;
+}
+.nav-link:hover{
+border-radius:15px !important
+cursor:pointer;
+transform:translateY(-0.15em);
+border-color: white;
+color:white;
+box-shadow: 0 0.5em .5em -0.4em white;
+
+.navbar-brand{
+font-weight: bold;
+}
+

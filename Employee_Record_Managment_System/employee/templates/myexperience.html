@@ -1,0 +1,88 @@
+{% extends 'emp_base.html' %}
+
+{% block main %}
+<script>
+    function checkpassword(){
+    if(document.signup.pwd.value!=document.signup.cpwd.value){
+    alert('Password and Confirm password field does not match');
+    document.signup.cpwd.focus();
+    return false;
+    }
+    return true;
+    }
+</script>
+<div class="card shadow m-2">
+    <div class="card-body">
+        <a href="{% url 'edit_myexperience' %}" class="btn btn-primary float-right btn-sm">EDIT WORK EXPERIENCE</a>
+        <h5 class="p-2" style="border-bottom: 2px solid">MY WORK EXPERIENCE</h5>
+        <div class="container-fluid">
+                   <table class="table table-bordered">
+                       <tr>
+                           <th>FIRST COMPANY NAME</th>
+                           <td>{{experience.company1name}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>FIRST JOB DESIGNATION</th>
+                           <td>{{experience.company1desig}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>FIRST JOB SALARY</th>
+                           <td>{{experience.company1salary}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>FIRST JOB DURATION</th>
+                           <td>{{experience.company1duration}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>SECOND COMPANY NAME</th>
+                           <td>{{experience.company2name}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>SECOND JOB DESIGNATION</th>
+                           <td>{{experience.company2desig}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>SECOND JOB SALARY</th>
+                           <td>{{experience.company2salary}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>SECOND JOB DURATION</th>
+                           <td>{{experience.company2duration}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>THIRD COMPANY NAME</th>
+                           <td>{{experience.company3name}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>THIRD JOB DESIGNATION</th>
+                           <td>{{experience.company3desig}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>THIRD JOB SALARY</th>
+                           <td>{{experience.company3salary}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>THIRD JOB DURATION</th>
+                           <td>{{experience.company3duration}}</td>
+
+                       </tr>
+                   </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

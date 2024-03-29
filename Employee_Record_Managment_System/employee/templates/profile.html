@@ -15,7 +15,7 @@
     <div class="card-body">
         <h5 class="p-2" style="border-bottom: 2px solid">PROFILE</h5>
         <div class="container-fluid">
-            <form method="post" name="signup" onsubmit="return checkpassword()">
+            <form method="post">
                 {% csrf_token %}
                 <!--For security in django forms-->
                 <div class="form-row">

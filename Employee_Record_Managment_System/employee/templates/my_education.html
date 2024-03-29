@@ -1,0 +1,109 @@
+{% extends 'emp_base.html' %}
+
+{% block main %}
+<script>
+    function checkpassword(){
+    if(document.signup.pwd.value!=document.signup.cpwd.value){
+    alert('Password and Confirm password field does not match');
+    document.signup.cpwd.focus();
+    return false;
+    }
+    return true;
+    }
+</script>
+<div class="card shadow m-2">
+    <div class="card-body">
+        <a href="{% url 'edit_myeducation' %}" class="btn btn-primary float-right btn-sm">EDIT EDUCATION DETAIL</a>
+        <h5 class="p-2" style="border-bottom: 2px solid">MY EDUCATION DETAIL</h5>
+        <div class="container-fluid">
+                   <table class="table table-bordered">
+                       <tr>
+                           <th>POST GRADUATION COURSE NAME</th>
+                           <td>{{education.coursepg}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>POST GRADUATE SCHOOL/COLLEGE</th>
+                           <td>{{education.schoolclgpg}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>YEAR OF PASSING IN PG</th>
+                           <td>{{education.yearofpassingpg}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>PERCENTAGE IN PG</th>
+                           <td>{{education.percentagepg}}</td>
+
+                       </tr>
+
+                            <tr>
+                           <th>GRADUATION COURSE NAME</th>
+                           <td>{{education.coursegra}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>GRADUATE SCHOOL/COLLEGE</th>
+                           <td>{{education.schoolclggra}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>YEAR OF PASSING IN GRADUATION</th>
+                           <td>{{education.yearofpassinggra}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>PERCENTAGE IN GRADUATION</th>
+                           <td>{{education.percentagegra}}</td>
+
+                       </tr>
+                            <tr>
+                           <th>SSC COURSE NAME</th>
+                           <td>{{education.coursessc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>SSC SCHOOL/COLLEGE</th>
+                           <td>{{education.schoolclgssc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>YEAR OF PASSING IN SSC</th>
+                           <td>{{education.yearofpassingssc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>PERCENTAGE IN SSC</th>
+                           <td>{{education.percentagessc}}</td>
+
+                       </tr>
+                            <tr>
+                           <th>HSC COURSE NAME</th>
+                           <td>{{education.coursehsc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>HSC SCHOOL/COLLEGE</th>
+                           <td>{{education.schoolclghsc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>YEAR OF PASSING IN HSC</th>
+                           <td>{{education.yearofpassinghsc}}</td>
+
+                       </tr>
+                       <tr>
+                           <th>PERCENTAGE IN HSC</th>
+                           <td>{{education.percentagehsc}}</td>
+
+                       </tr>
+                   </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

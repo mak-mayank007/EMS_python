@@ -23,14 +23,14 @@
 
    <center><img src="{% static 'images/57314.jpg' %}" width="150" height="300" class="img-thumbnail rounded-circle my-3" ></center>
       <div class="list-group">
-        <a href="{% url 'emp_home' %}" class="list-group-item list-group-item-action {% if request.path == '/emp_home' %} active {% endif %}">DASHBOARD</a>
-        <a href="{% url 'profile' %}" class="list-group-item list-group-item-action">PROFILE</a>
-        <a href="" class="list-group-item list-group-item-action">EXPERIENCE</a>
-        <a href="" class="list-group-item list-group-item-action">EDIT EXPERIENCE</a>
-        <a href="" class="list-group-item list-group-item-action">EDUCATION</a>
-        <a href="" class="list-group-item list-group-item-action">EDIT EDUCATION</a>
-        <a href="" class="list-group-item list-group-item-action">CHANGE PASSWORD</a>
-          <a href="{% url 'logout' %}" class="list-group-item list-group-item-action">LOG OUT</a>
+        <a href="{% url 'emp_home' %}" class="list-group-item list-group-item-action {% if request.path == '/emp_home/' %} active {% endif %}">DASHBOARD</a>
+        <a href="{% url 'profile' %}" class="list-group-item list-group-item-action {% if request.path == '/profile/' %} active {% endif %}">PROFILE</a>
+        <a href="{% url 'my_experience' %}" class="list-group-item list-group-item-action {% if request.path == '/my_experience/' %} active {% endif %}">EXPERIENCE</a>
+        <a href="{% url 'edit_myexperience' %}" class="list-group-item list-group-item-action {% if request.path == '/edit_myexperience/' %} active {% endif %}">EDIT EXPERIENCE</a>
+        <a href="{%url 'my_education' %}" class="list-group-item list-group-item-action {% if request.path == '/my_education/' %} active {% endif %}">EDUCATION</a>
+        <a href="{% url 'edit_myeducation' %}" class="list-group-item list-group-item-action {% if request.path == '/edit_myeducation/' %} active {% endif %}">EDIT EDUCATION</a>
+        <a href="{% url 'change_password' %}" class="list-group-item list-group-item-action {% if request.path == '/change_password/' %} active {% endif %}">CHANGE PASSWORD</a>
+          <a href="{% url 'logout' %}" class="list-group-item list-group-item-action ">LOG OUT</a>
 
       </div>
 
